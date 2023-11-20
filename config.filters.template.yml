@@ -1,0 +1,35 @@
+regions:
+  - us-east-2
+  - global
+account-blocklist:
+  - "999999999999" # production
+resource-types:
+  targets:
+    - CloudFormationStack
+    - S3Bucket
+accounts:
+  "000000000000": #Remember to change the 000000000000 with your AWS root account ID. In this example, we specified to delete cloudformation and S3 resources only, by using preset filters. With the usage of the glob type, we are instructing aws-nuke to delete cloudformation stacks that start with the string "stack-example-" and end with anything else, as defined by the wildcard character (*). The same occurs with the S3 resources, but with a different string pattern. For any other types and filtering options, please visit this website.
+    presets:
+      - "cf-filter"
+      - "s3-filter"
+presets:
+  cf-filter:
+    filters:
+      CloudFormationStack:
+        - property: 'Name'
+          type: glob
+          value: "stack-example-*"
+          invert: true
+  s3-filter:
+    filters:
+      S3Bucket:
+        - property: 'Name'
+          type: glob
+          value: "bucket-example-*"
+          invert: true
+feature-flags:
+  disable-deletion-protection:
+    RDSInstance: true
+    EC2Instance: true
+    CloudformationStack: true
+  force-delete-lightsail-addons: true

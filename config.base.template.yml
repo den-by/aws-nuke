@@ -1,0 +1,8 @@
+regions:
+  - us-east-1
+  - global
+account-blocklist:
+  - "999999999999" # production
+accounts:
+  "000000000000": #Remember to change the 000000000000 with your AWS root account ID.
+
