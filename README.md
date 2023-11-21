@@ -1,6 +1,6 @@
-# Project Name
+# AWS NUKE HELPER
 
-Provide a brief description of what your project does and its main dependencies.
+This project is a helper for aws-nuke. It is used to delete all resources in an AWS account.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ For create `.env` file and `config.yml` file you can run the initialization scri
 
 ## Configuration
 
-You will need to set up a `.env` file and `config.yml` for environment and configuration data respectively.
+You will need to set up a `.env` file and `config.yml` for environment and configuration data respectively. Information on how to do this can be found in the aws-nuke documentation https://github.com/rebuy-de/aws-nuke.
 
 ## Run AWS nuke
 
