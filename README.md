@@ -18,7 +18,7 @@ aws iam create-account-alias --account-alias your_account_alias
 ### Initialization Script
 For create `.env` file and `config.yml` file you can run the initialization script:
 ```shell
-./bin/init.sh
+bash ./bin/init.sh
 ```
 
 ## Configuration
@@ -29,10 +29,10 @@ You will need to set up a `.env` file and `config.yml` for environment and confi
 
 ### dry-run
 ```shell
-./bin/dry-run.sh
+bash bin/dry-run.sh
 ```
 
 ### run
 ```shell
-./bin/run.sh
+bash ./bin/run.sh
 ```
